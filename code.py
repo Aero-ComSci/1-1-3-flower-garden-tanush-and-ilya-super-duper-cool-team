@@ -1,7 +1,8 @@
 
 import turtle as turtle
 flowers = {"rose", "lily", "sunflower", "daisy", "tulip","roses", "lilies", "sunflowers", "daisies", "tulips"}
-from NAMEOFFILE import rose
+from sad import rose
+from sunflower3 import sunflower
 x = input("Pick some flowers (separate by spaces): ").lower()  
 y = x.split() 
 com2 = len(y) 
@@ -10,8 +11,8 @@ com = 0
     
 def tulip():
     print("drawing a tulip")
-def sunflower():
-    print("drawing a Sunflower")
+def sunflower1():
+    sunflower()
 def daisy():
     print("drawing a daisy")
 def lily():
@@ -23,8 +24,8 @@ def rose1():
 flower_functions = {
     "tulip": tulip,
     "tulips": tulip,
-    "sunflower": sunflower,
-    "sunflowers": sunflower,
+    "sunflower": sunflower1,
+    "sunflowers": sunflower1,
     "daisy": daisy,
     "daisies": daisy,
     "lily": lily,
