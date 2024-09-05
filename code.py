@@ -1,7 +1,8 @@
-flowers = {"rose", "lily", "sunflower", "daisy", "tulip"}
+flowers = {"rose", "lily", "sunflower", "daisy", "tulip","roses", "lilies", "sunflowers", "daisies", "tulips"}
 x = input("Pick some flowers (separate by spaces): ").lower()  
-y = x.split()  
-
+y = x.split() 
+com2 = len(y) 
+com = 0
 def tulip():
     print("drawing a tulip")
 def sunflower():
@@ -15,17 +16,28 @@ def rose():
     
 flower_functions = {
     "tulip": tulip,
+    "tulips": tulip,
     "sunflower": sunflower,
+    "sunflowers": sunflower,
     "daisy": daisy,
+    "daisies": daisy,
     "lily": lily,
-    "rose": rose
+    "lilies": lily,
+    "rose": rose,
+    "roses": rose,
 }
 
-# Process each word in the input
-for word in y:
+
+for index,word in enumerate(y):
     if word in flowers:
-        print("Yea")
-        flower_functions[word]()  # Call the function associated with the flower name
+        if index > 0 and y[index-1].isdigit():
+            count = int(y[index-1])
+        else:
+            count = 1
+        for _ in range(count):
+            flower_functions[word]()  
     else:
-        print("No")
-        
+       com = com + 1
+#Every time the program scans a word and find that it doesnt match with any flower name available it will add a 1 to the variable and at the end of the loop if the variable is equal to the number of words in the input that means we cannot draw the request
+if com == com2:
+    print("I am sorry but your request doesnt match with the guidelines please try another flower")
