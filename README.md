@@ -11,3 +11,7 @@
 #### Prints mixtures of flowers!
 ![image](https://github.com/user-attachments/assets/5627abaa-690d-4e30-a4ff-60d7c5dac1ed)
 ![image](https://github.com/user-attachments/assets/88c7a0d5-703d-4a56-b8b0-51e83aaf11d8)
+
+#### All flowers it can print! (Daisy, Lilys, Roses, Sunflowers, and Tulips!)
+![image](https://github.com/user-attachments/assets/f9d9a8b7-bd27-4456-9fc9-d3d8d02aaded)
+![image](https://github.com/user-attachments/assets/9871cce6-89ab-406e-a912-ed8addf6b0b3)
