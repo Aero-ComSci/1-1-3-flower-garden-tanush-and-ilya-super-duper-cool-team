@@ -133,7 +133,56 @@ def rose():
     current_x += 100  # Move to the next position for the next flower
 
 def lily():
-    print("drawing a lily")
+    global current_x  # Use global X position
+    t.penup()
+    t.goto(current_x, 0)  # Start at the current X and Y=0
+    t.pendown()
+
+    for idk in range(6):
+        t.color("purple")
+        t.begin_fill()
+        t.circle(45, 60)
+        t.left(120)
+        t.circle(45, 60)
+        t.left(120)
+        t.end_fill()
+        t.right(60)
+
+    # Draw the stem and leaves
+    t.pencolor("darkgreen")
+    t.pensize(5)
+    startpos = t.position()  # Store the current position for leaf drawing
+    t.circle(-15, 70)
+    t.penup()
+    t.setposition(startpos)
+    t.pendown()
+    t.left(90)
+    t.circle(-15, 70)
+    t.setposition(startpos)
+
+    # Draw the stem
+    t.setheading(270)
+    t.penup()
+    t.forward(40)
+    t.pensize(5)
+    t.pendown()
+    t.forward(50)
+
+    # Draw the leaf
+    t.fillcolor('lightgreen')
+    t.begin_fill()
+    t.left(70)
+    t.circle(50, 43)
+    t.left(120)
+    t.circle(50, 43)
+    
+    # Continue drawing stem
+    t.setheading(270)
+    t.forward(70)
+    t.end_fill()
+
+    # Move to the next position for the next flower
+    current_x += 150 
 def daisy():
     global current_x 
     t.speed(0)
