@@ -187,6 +187,7 @@ def rose():
 def lily():
     global current_x  
     t.penup()
+    t.speed(0)
     t.goto(current_x, 0) 
     t.pendown()
 
@@ -204,18 +205,18 @@ def lily():
     t.pensize(5)
     startpos = t.position() 
     t.circle(-15, 70)
-    t.penup()
+    #t.penup()
     t.setposition(startpos)
-    t.pendown()
+  #  t.pendown()
     t.left(90)
     t.circle(-15, 70)
     t.setposition(startpos)
     #stem
     t.setheading(270)
-    t.penup()
+  #  t.penup()
     t.forward(40)
     t.pensize(5)
-    t.pendown()
+   # t.pendown()
     t.forward(50)
 
     #Leaf
