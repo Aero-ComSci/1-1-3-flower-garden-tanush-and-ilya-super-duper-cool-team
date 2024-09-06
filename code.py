@@ -1,4 +1,5 @@
 
+
 import turtle as t
 flowers = {"rose", "lily", "sunflower", "daisy", "tulip","roses", "lilies", "sunflowers", "daisies", "tulips"}
 # from TEST import roser
@@ -14,18 +15,69 @@ def DegreeCurve(n, r, d=1):
         t.left(d)
         t.circle(r, abs(d))
 def tulip():
-    print("drawing a tulip")
+    t.speed(0)
+    global current_x
+    t.speed(100)
+    t.penup()
+    t.goto((current_x, -150)) 
+    t.setheading(90) 
+    t.pendown()
+#tulip!!!
+
+#stem
+    
+    t.setheading(270)
+    t.penup()
+    t.forward(50)
+    t.pencolor("darkgreen")
+    t.left(180)
+    t.pendown()
+    t.pensize(5)
+    t.forward(100)
+    #leaf
+    t.fillcolor('lightgreen')
+    t.begin_fill()
+    t.left(70)
+    t.circle(50,43)
+    t.left(120) 	
+    t.circle(50,43)
+    t.end_fill()
+    #petals
+    t.fillcolor("orange")
+    t.left(82)
+    t.forward(75)
+    t.pencolor("orange")
+    t.right(90)
+    t.penup()
+    t.pendown()
+    t.begin_fill()
+    t.circle(50,-90)
+    t.left(40)
+    t.forward(30)
+    t.left(120)
+    t.forward(30)
+    t.setheading(0)
+    t.forward(30)
+    t.right(70)
+    t.forward(30)
+    t.setheading(0)
+    t.left(75)
+    t.forward(30)
+    t.setheading(95)
+    t.circle(63,-60)
+    t.end_fill()
+    current_x += 150  
 
 def sunflower1():
     global current_x
     t.speed(100)
     t.penup()
-    t.goto((current_x, -150))  # Start from the current X position
-    t.setheading(90)  # Ensure the turtle is facing up
+    t.goto((current_x, -150)) 
+    t.setheading(90) 
     t.pensize(5)
     t.pendown()
 
-    # Draw the stem and leaf
+    
     t.pencolor("darkgreen")
     t.forward(125)
     t.fillcolor('lightgreen')
@@ -36,8 +88,8 @@ def sunflower1():
     t.circle(100, 43)
     t.end_fill()
 
-    # Draw the sunflower center
-    t.goto((current_x, 25))  # Position the center of the sunflower
+ 
+    t.goto((current_x, 25)) 
     t.pendown()
     t.pencolor("saddlebrown")
     t.fillcolor("saddlebrown")
@@ -45,27 +97,27 @@ def sunflower1():
     t.circle(30)
     t.end_fill()
 
-    # Draw the petals
+   
     t.pencolor("yellow2")
-    t.setheading(0)  # Reset heading to right direction
+    t.setheading(0) 
     t.pensize(25)
     t.penup()
-    t.goto((current_x, 50))  # Position for the petals
+    t.goto((current_x, 50))  
     t.pendown()
     for fpetal in range(0, 360, 40):
         t.penup()
-        t.setheading(fpetal)  # Set heading for each petal
+        t.setheading(fpetal)  
         t.forward(40)
         t.dot(15 * 2, "yellow")
         t.backward(40)
 
-    # Update the X-coordinate for the next flower
-    current_x += 150  # Move right for the next sunflower
+   
+    current_x += 150  
 
 def rose():
     global current_x
 
-    s = 0.2  # Smaller size
+    s = 0.2 
     t.pensize(2)
     t.color("red")
     t.pencolor("black")
@@ -73,49 +125,49 @@ def rose():
     t.speed(100)
     t.penup()
     t.setheading(360)
-    t.goto(current_x, 450 * s)  # Adjusted position for smaller size
+    t.goto(current_x, 450 * s)  
     t.pendown()
 
     t.begin_fill()
-    t.circle(100 * s, 30)  # Reduced size
-    DegreeCurve(60, 25 * s)  # Reduced size
-    t.circle(100 * s, 30)  # Reduced size
-    DegreeCurve(4, 50 * s)  # Reduced size
-    t.circle(100 * s, 50)  # Reduced size
-    DegreeCurve(50, 25 * s)  # Reduced size
-    t.circle(175 * s, 65)  # Reduced size
-    DegreeCurve(40, 35 * s)  # Reduced size
-    t.circle(75 * s, 50)  # Reduced size
-    DegreeCurve(20, 25 * s, -1)  # Reduced size
-    t.circle(200 * s, 60)  # Reduced size
-    DegreeCurve(18, 25 * s)  # Reduced size
-    t.fd(125 * s)  # Reduced size
+    t.circle(100 * s, 30) 
+    DegreeCurve(60, 25 * s)  
+    t.circle(100 * s, 30)  
+    DegreeCurve(4, 50 * s)  
+    t.circle(100 * s, 50)  
+    DegreeCurve(50, 25 * s)  
+    t.circle(175 * s, 65)  
+    DegreeCurve(40, 35 * s)  
+    t.circle(75 * s, 50)  
+    DegreeCurve(20, 25 * s, -1)  
+    t.circle(200 * s, 60)  
+    DegreeCurve(18, 25 * s)  
+    t.fd(125 * s) 
     t.right(150)
-    t.circle(-250 * s, 12)  # Reduced size
+    t.circle(-250 * s, 12) 
     t.left(140)
-    t.circle(275 * s, 110)  # Reduced size
+    t.circle(275 * s, 110)  
     t.left(27)
-    t.circle(325 * s, 100)  # Reduced size
+    t.circle(325 * s, 100)  
     t.left(130)
-    t.circle(-150 * s, 20)  # Reduced size
+    t.circle(-150 * s, 20)  
     t.right(123)
-    t.circle(110 * s, 57)  # Reduced size
+    t.circle(110 * s, 57)
     t.end_fill()
 
     t.left(120)
-    t.fd(140 * s)  # Reduced size
+    t.fd(140 * s)  
     t.left(115)
-    t.circle(150 * s, 33)  # Reduced size
+    t.circle(150 * s, 33) 
     t.left(180)
-    t.circle(-150 * s, 33)  # Reduced size
-    DegreeCurve(70, 112.5 * s, -1)  # Reduced size
-    t.circle(175 * s, 104)  # Reduced size
+    t.circle(-150 * s, 33)  
+    DegreeCurve(70, 112.5 * s, -1)  
+    t.circle(175 * s, 104)  
     t.left(90)
-    t.circle(100 * s, 105)  # Reduced size
-    t.circle(-250 * s, 63)  # Reduced size
+    t.circle(100 * s, 105) 
+    t.circle(-250 * s, 63)  
     t.penup()
     
-    t.goto(current_x +16, 10* s)  # Adjusted position
+    t.goto(current_x +16, 10* s)  
     t.pendown()
     t.color("darkgreen")
     t.pensize(5)
@@ -130,12 +182,12 @@ def rose():
     t.circle(70, 70)
     t.end_fill()
 
-    current_x += 100  # Move to the next position for the next flower
-
+    current_x += 100  
+    
 def lily():
-    global current_x  # Use global X position
+    global current_x  
     t.penup()
-    t.goto(current_x, 0)  # Start at the current X and Y=0
+    t.goto(current_x, 0) 
     t.pendown()
 
     for idk in range(6):
@@ -148,10 +200,9 @@ def lily():
         t.end_fill()
         t.right(60)
 
-    # Draw the stem and leaves
     t.pencolor("darkgreen")
     t.pensize(5)
-    startpos = t.position()  # Store the current position for leaf drawing
+    startpos = t.position() 
     t.circle(-15, 70)
     t.penup()
     t.setposition(startpos)
@@ -159,8 +210,7 @@ def lily():
     t.left(90)
     t.circle(-15, 70)
     t.setposition(startpos)
-
-    # Draw the stem
+    #stem
     t.setheading(270)
     t.penup()
     t.forward(40)
@@ -168,7 +218,7 @@ def lily():
     t.pendown()
     t.forward(50)
 
-    # Draw the leaf
+    #Leaf
     t.fillcolor('lightgreen')
     t.begin_fill()
     t.left(70)
@@ -176,12 +226,12 @@ def lily():
     t.left(120)
     t.circle(50, 43)
     
-    # Continue drawing stem
+    
     t.setheading(270)
     t.forward(70)
     t.end_fill()
 
-    # Move to the next position for the next flower
+
     current_x += 150 
 def daisy():
     global current_x 
