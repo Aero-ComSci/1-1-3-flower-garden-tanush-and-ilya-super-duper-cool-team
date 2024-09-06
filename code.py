@@ -4,7 +4,7 @@ import turtle as t
 flowers = {"rose", "lily", "sunflower", "daisy", "tulip","roses", "lilies", "sunflowers", "daisies", "tulips"}
 # from TEST import roser
 # from sunflower3 import sunflower
-x = input("What would you like us to draw?(separate by spaces): ").lower()  
+x = input("What would you like us to draw?(separate by spaces and no commas): ").lower()  
 y = x.split() 
 com2 = len(y) 
 com = 0
